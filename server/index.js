@@ -1,17 +1,21 @@
-const express = require("express");
-const app = express();
-const PORT = process.env.PORT || 3001;
+const { MongoClient } = require("mongodb");
+const notesRepo = require("./repo/todosRepo");
+const initalTodos = require("./db/data.json");
+require("./api/app");
 
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
-});
+const url = "mongodb://localhost:27017";
+const dbName = "TodoList";
+const collectionName = "todos";
 
-const path = require("path");
-app.use(express.static(path.resolve(__dirname, "../client/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is listening on ${PORT}`);
-});
+(async () => {
+  const client = new MongoClient(url);
+  try {
+    await client.connect();
+    await client.db(dbName).dropDatabase();
+    await notesRepo.load(initalTodos);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    client.close();
+  }
+})();
