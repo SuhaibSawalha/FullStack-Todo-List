@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.btn {
+  padding: 7px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s;
+}

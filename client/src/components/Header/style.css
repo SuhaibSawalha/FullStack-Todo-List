@@ -1,0 +1,29 @@
+header {
+  text-align: center;
+}
+.add-todo form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.add-todo input {
+  padding: 5px;
+  height: 30px;
+  width: 250px;
+}
+.add-todo .btn-add {
+  background-color: rgb(151, 19, 151);
+  width: 60px;
+  margin-left: 20px;
+}
+.add-todo .btn-add:hover {
+  background-color: rgb(121, 0, 121);
+}
+
+.search-task input {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 30px;
+  padding: 5px;
+}
