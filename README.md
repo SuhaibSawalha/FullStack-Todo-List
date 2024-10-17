@@ -1,3 +1,5 @@
-This TodoList is built using MERN stack -> Mongodb, Express, React, Node js
+# ToDo List
 
-This is the final task of the React path in foothill fontend internship program
+This todo list is built using React as the front-end, Node/Express JS as the back-end and MongoDB as database.
+
+[![Birzeit Sport Introduction](https://img.youtube.com/vi/-NiIqY6Aqsw/0.jpg)](https://www.youtube.com/watch?v=-NiIqY6Aqsw)
